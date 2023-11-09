@@ -1,7 +1,7 @@
 <?php include 'header.php'?>
 <div class="container">
     <div class="row-mt-5">
-        <div class="container-xl bg-primary " style="height:400px;">
+        <div class="container-xl bg-sdg3 " style="height:400px;">
             <div class="row justify-content-center">
                 <div class="co-md-5 text-center text-md-start text-light ps-5">
                     <h1>
@@ -46,19 +46,17 @@
             <div class="tab-pane fade " id="pills-profile" role="tabpanel"
                 aria-labelledby="pills-profile-tab">
                 <div class="container d-grid" id = "research311">
+                    
                     <div class="d-inline-flex mt-3">
                         <div class="border border-dark">
                             <div class=" d-inline-flex justify-content-start align-items-center">
-                                
-                                <!--This where you insert your logo of sdg-->
-                                <img src="" class="p-4 d-block" width="150" alt="">
-                      
+                                <img src="public/assets/goal-3.png" class="p-4 d-block" width="150" alt="">
                                 <div class="d-grid ms-5 me-5">
                                     <p class="fw-normal">Target</p>
                                     <h3 class="fw-bold">3.1.1</h3>
-                                    <p>By 2030, reduce the global maternal mortality ratio to less than 70 per 100,000
-                                        live
-                                        births</p>
+                                    <!--Name of in every research-->
+                                    <h4 class="fw-bolder">Research on health and wellbeing</h4>
+                                    <p></p>
                                 </div>
                             </div>
                             <div class="dropdown">
@@ -73,16 +71,16 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="d-inline-flex mt-3">
                         <div class="border border-dark">
                             <div class=" d-inline-flex justify-content-start align-items-center">
-                                <img src="../public/assets/goal-3.png" class="p-4 d-block" width="150" alt="">
+                                <img src="public/assets/goal-3.png" class="p-4 d-block" width="150" alt="">
                                 <div class="d-grid ms-5 me-5">
                                     <p class="fw-normal">Target</p>
                                     <h3 class="fw-bold">3.2.1</h3>
-                                    <p>By 2030, reduce the global maternal mortality ratio to less than 70 per 100,000
-                                        live
-                                        births</p>
+                                    <h4 class="fw-bolder">Current collaborations with health institutions</h4>
+                                    <p>Have current collaborations with local, national, or global health institutions to improve health and well-being outcomes.</p>
                                 </div>
                             </div>
                             <div class="dropdown">
@@ -97,16 +95,16 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="d-inline-flex mt-3">
                         <div class="border border-dark">
                             <div class=" d-inline-flex justify-content-start align-items-center">
-                                <img src="../public/assets/goal-3.png" class="p-4 d-block" width="150" alt="">
+                                <img src="public/assets/goal-3.png" class="p-4 d-block" width="150" alt="">
                                 <div class="d-grid ms-5 me-5">
                                     <p class="fw-normal">Target</p>
                                     <h3 class="fw-bold">3.2.2</h3>
-                                    <p>By 2030, reduce the global maternal mortality ratio to less than 70 per 100,000
-                                        live
-                                        births</p>
+                                    <h4 class="fw-bolder">Health outreach programmes (extension project/activity)</h4>
+                                    <p>Deliver outreach programmes and projects in the local community (which can include student volunteering programmes) to improve or promote health well-being including hygiene, nutrition, family planning, sports, exercise, aging well, and other health and well-being related topics.</p>
                                 </div>
                             </div>
                             <div class="dropdown">
@@ -121,16 +119,16 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="d-inline-flex mt-3">
                         <div class="border border-dark">
                             <div class=" d-inline-flex justify-content-start align-items-center">
-                                <img src="../public/assets/goal-3.png" class="p-4 d-block" width="150" alt="">
+                                <img src="public/assets/goal-3.png" class="p-4 d-block" width="150" alt="">
                                 <div class="d-grid ms-5 me-5">
                                     <p class="fw-normal">Target</p>
                                     <h3 class="fw-bold">3.2.3</h3>
-                                    <p>By 2030, reduce the global maternal mortality ratio to less than 70 per 100,000
-                                        live
-                                        births</p>
+                                    <h4 class="fw-bolder">Shared sport facilities</h4>
+                                    <p>Shared sports facilities (gymnasium, wellness gym, outdoor field) with the local community, for instance with local schools or with the general public.</p>
                                 </div>
                             </div>
                             <div class="dropdown">
@@ -145,16 +143,16 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="d-inline-flex mt-3">
                         <div class="border border-dark">
                             <div class=" d-inline-flex justify-content-start align-items-center">
-                                <img src="../public/assets/goal-3.png" class="p-4 d-block" width="150" alt="">
+                                <img src="public/assets/goal-3.png" class="p-4 d-block" width="150" alt="">
                                 <div class="d-grid ms-5 me-5">
                                     <p class="fw-normal">Target</p>
                                     <h3 class="fw-bold">3.2.4</h3>
-                                    <p>By 2030, reduce the global maternal mortality ratio to less than 70 per 100,000
-                                        live
-                                        births</p>
+                                    <h4 class="fw-bolder">Sexual and reproductive health care services for students</h4>
+                                    <p>Provide student access to sexual and reproductive health-care services including information and education services.</p>
                                 </div>
                             </div>
                             <div class="dropdown">
@@ -169,16 +167,16 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="d-inline-flex mt-3">
                         <div class="border border-dark">
                             <div class=" d-inline-flex justify-content-start align-items-center">
-                                <img src="../public/assets/goal-3.png" class="p-4 d-block" width="150" alt="">
+                                <img src="public/assets/goal-3.png" class="p-4 d-block" width="150" alt="">
                                 <div class="d-grid ms-5 me-5">
                                     <p class="fw-normal">Target</p>
                                     <h3 class="fw-bold">3.2.5</h3>
-                                    <p>By 2030, reduce the global maternal mortality ratio to less than 70 per 100,000
-                                        live
-                                        births</p>
+                                    <h4 class="fw-bolder">Sexual and reproductive health care services for employees</h4>
+                                    <p>Provide student access to sexual and reproductive health-care services including information and education services.</p>
                                 </div>
                             </div>
                             <div class="dropdown">
@@ -193,16 +191,16 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="d-inline-flex mt-3">
                         <div class="border border-dark">
                             <div class=" d-inline-flex justify-content-start align-items-center">
-                                <img src="../public/assets/goal-3.png" class="p-4 d-block" width="150" alt="">
+                                <img src="public/assets/goal-3.png" class="p-4 d-block" width="150" alt="">
                                 <div class="d-grid ms-5 me-5">
                                     <p class="fw-normal">Target</p>
                                     <h3 class="fw-bold">3.2.6</h3>
-                                    <p>By 2030, reduce the global maternal mortality ratio to less than 70 per 100,000
-                                        live
-                                        births</p>
+                                    <h4 class="fw-bolder">Mental health support for students and employees</h4>
+                                    <p>Provide students and staff with access to mental health support.</p>
                                 </div>
                             </div>
                             <div class="dropdown">
@@ -217,16 +215,16 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="d-inline-flex mt-3">
                         <div class="border border-dark">
                             <div class=" d-inline-flex justify-content-start align-items-center">
-                                <img src="../public/assets/goal-3.png" class="p-4 d-block" width="150" alt="">
+                                <img src="public/assets/goal-3.png" class="p-4 d-block" width="150" alt="">
                                 <div class="d-grid ms-5 me-5">
                                     <p class="fw-normal">Target</p>
                                     <h3 class="fw-bold">3.2.7</h3>
-                                    <p>By 2030, reduce the global maternal mortality ratio to less than 70 per 100,000
-                                        live
-                                        births</p>
+                                    <h4 class="fw-bolder">Smoke/vape-free policy</h4>
+                                    <p>Have a “smoke/vape-free policy”.</p>
                                 </div>
                             </div>
                             <div class="dropdown">
