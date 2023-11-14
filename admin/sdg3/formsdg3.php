@@ -1,8 +1,10 @@
-<?php include 'header.php'?>
-<!-- this form is for inserting the data in your data base -->
-<!-- Note : wala pa tong connection sa database gagawa pa kayo at 
-wala pa din java script
-just simply layout -->
+<?php include('../../includes/header.php');
+include '../../includes/db.php';?>
+
+
+<?php if (isset($_GET['message'])) { ?>
+            <p class="text-center bg-success bg-gradient text-light p-4"><?php echo $_GET['message']; ?></p>
+        <?php } ?>
 <div class="container mt-5 mb-5">
     <div class="row-mt-5">
         <div class="dropdown">
@@ -35,13 +37,13 @@ just simply layout -->
         </div>
         <div class=" bg-white border border-3 border-dark mt-5 w-100">
             <h2 class="text-center pt-3 mb-3">Add Research</h2>
-            <div class="container" style=" height: auto;">
-                <div class="d-flex w-100 h-100">
+            <div class="container" style=" height:auto;">
+                <div class="d-flex w-100 h-auto">
 
                     <!--This div is for research 3.1.1-->
                     <div class="collapse w-100 h-auto" id="research311" style="display: block ;">
                         <h2 class="text-center pb-5">Research on health and wellbeing</h2>
-                        <form action="" method="post">
+                        <form action="../../admin/sdg3/insertres3.1.1.php" method="post" name="form1">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
                                 <input type="text" class="form-control" placeholder="Title of the Research" name="title">
@@ -56,7 +58,7 @@ just simply layout -->
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Total Number of clinical citations" name="no_clinical">
+                                <input type="text" class="form-control" placeholder="Total Number of clinical citations" name="no_clinical">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-building"></i></span>
@@ -699,4 +701,3 @@ HIV/AIDS. " name="no_citations">
         div_res327.style.display = "block";
     });
 </script>
-<?= $this->endSection() ?>
