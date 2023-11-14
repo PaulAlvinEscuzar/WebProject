@@ -64,6 +64,7 @@ include '../includes/db.php'; ?>
                                     id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 </button>
                                 <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton1">
+                                    <!-- Eto para madisplay yung data sa sdg content-->
                                     <h3 class="text-start ms-3">Score:</h3>
                                     <?php
                                     $query311 = "SELECT * FROM `research3.1.1`";
