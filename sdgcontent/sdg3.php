@@ -20,19 +20,13 @@ include '../includes/db.php'; ?>
         <div class="container-lg bg-secondary justify-content-center  fs-5 pt-2 pb-1">
             <ul class="nav nav-pills " id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active text-light fw-dark" style="letter-spacing :2px;" id="pills-home-tab"
-                        data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab"
-                        aria-controls="pills-home" aria-selected="true">Overview</button>
+                    <button class="nav-link active text-light fw-dark" style="letter-spacing :2px;" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Overview</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link text-light fw-dark" style="letter-spacing :2px;" id="pills-profile-tab"
-                        data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab"
-                        aria-controls="pills-profile" aria-selected="false">Target</button>
+                    <button class="nav-link text-light fw-dark" style="letter-spacing :2px;" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Target</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link text-light fw-light" style="letter-spacing :2px;" id="pills-contact-tab"
-                        data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab"
-                        aria-controls="pills-contact" aria-selected="false">Progress and Info</button>
+                    <button class="nav-link text-light fw-light" style="letter-spacing :2px;" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Progress and Info</button>
                 </li>
             </ul>
         </div>
@@ -47,6 +41,7 @@ include '../includes/db.php'; ?>
             <div class="tab-pane fade " id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                 <div class="container d-grid" id="research311">
 
+                    <!--Research 3.1.1-->
                     <div class="d-inline-flex mt-3">
                         <div class="border border-dark w-100">
                             <div class=" d-inline-flex justify-content-start align-items-center">
@@ -60,10 +55,9 @@ include '../includes/db.php'; ?>
                                 </div>
                             </div>
                             <div class="dropdown">
-                                <button class="btn btn-light dropdown-toggle float-end w-100" type="button"
-                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-light dropdown-toggle float-end w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 </button>
-                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton1">
+                                <ul class="dropdown-menu w-100 bg-light" aria-labelledby="dropdownMenuButton1">
                                     <!-- Eto para madisplay yung data sa sdg content-->
                                     <h3 class="text-start ms-3">Score:</h3>
                                     <?php
@@ -78,35 +72,32 @@ include '../includes/db.php'; ?>
                                             $no_clinical = $row['no_clinical'];
                                             $no_citations = $row['no_citation'];
                                     ?>
-                                    <div class="container d-grid mt-3">
-                                        <div class="border border-dark p-3">
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text" id="basic-addon1">Title</span>
-                                            <input type="text" class="form-control" value="<?php echo "$title"?>"
-                                                aria-label="Username" aria-describedby="basic-addon1">
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text" id="basic-addon1">Author</span>
-                                            <input type="text" class="form-control" value="<?php echo "$author"?>"
-                                                aria-label="Username" aria-describedby="basic-addon1">
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text" id="basic-addon1">Year Publication</span>
-                                            <input type="text" class="form-control" value="<?php echo "$yearpub"?>"
-                                                aria-label="Username" aria-describedby="basic-addon1">
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text" id="basic-addon1">Number of Clinical</span>
-                                            <input type="text" class="form-control" value="<?php echo "$no_clinical"?>"
-                                                aria-label="Username" aria-describedby="basic-addon1">
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text" id="basic-addon1">Number of Citations</span>
-                                            <input type="text" class="form-control" value="<?php echo "$no_citations"?>"
-                                                aria-label="Username" aria-describedby="basic-addon1">
-                                        </div>
-                                        </div>
-                                    </div>
+                                            <div class="container d-grid mt-3">
+                                                <div class="border border-success border-3 p-3">
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Title</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$title" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Author</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$author" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Year Publication</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$yearpub" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Number of
+                                                            Clinical</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$no_clinical" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Number of
+                                                            Citations</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$no_citations" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                </div>
+                                            </div>
                                     <?php
                                         }
                                     }
@@ -117,6 +108,7 @@ include '../includes/db.php'; ?>
                         </div>
                     </div>
 
+                    <!--Research 3.2.1-->
                     <div class="d-inline-flex mt-3">
                         <div class="border border-dark w-100">
                             <div class=" d-inline-flex justify-content-start align-items-center">
@@ -130,18 +122,121 @@ include '../includes/db.php'; ?>
                                 </div>
                             </div>
                             <div class="dropdown">
-                                <button class="btn btn-light dropdown-toggle float-end w-100" type="button"
-                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-light dropdown-toggle float-end w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 </button>
-                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <ul class="dropdown-menu w-100 bg-light" aria-labelledby="dropdownMenuButton1">
+                                    <h3 class="text-start ms-3">Score:</h3>
+                                    <h3 class="text-start ms-3 fw-bold p-3">Score:</h3>
+                                    <?php
+                                    $sql = "SELECT COUNT(*) AS total FROM `research3.2.1`";
+                                    $result = mysqli_query($conn, $sql);
+
+                                    if (mysqli_num_rows($result) > 0) {
+                                        $row = $result->fetch_assoc();
+                                        $totalRecord = $row['total'];
+                                    }
+                                    $local = "SELECT COUNT(*) AS local FROM `research3.2.1` WHERE categ = 'Local'";
+                                    $no_local = mysqli_query($conn, $local);
+                                    if (mysqli_num_rows($no_local) > 0) {
+                                        $row = $no_local->fetch_assoc();
+                                        $local_number = $row['local'];
+                                    }
+                                    $national = "SELECT COUNT(*) AS national FROM `research3.2.1` WHERE categ = 'National'";
+                                    $no_national = mysqli_query($conn, $national);
+                                    if (mysqli_num_rows($no_national) > 0) {
+                                        $row = $no_national->fetch_assoc();
+                                        $national_number = $row['national'];
+                                    }
+                                    $global = "SELECT COUNT(*) AS global FROM `research3.2.1` WHERE categ = 'Global'";
+                                    $no_global = mysqli_query($conn, $global);
+                                    if (mysqli_num_rows($no_national) > 0) {
+                                        $row = $no_global->fetch_assoc();
+                                        $global_number = $row['global'];
+                                    }
+                                    ?>
+                                    <div class="container d-grid bg-success p-3">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">Total number of
+                                                collaborations with health institutions</span>
+                                            <input type="text" class="form-control" value="<?php echo "$totalRecord" ?>" readonly aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">Total number of local
+                                                collaborations</span>
+                                            <input type="text" class="form-control" value="<?php echo "$local_number" ?>" readonly aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">Total number of national
+                                                collaborations</span>
+                                            <input type="text" class="form-control" value="<?php echo "$national_number" ?>" readonly aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">Total number of global
+                                                collaborations</span>
+                                            <input type="text" class="form-control" value="<?php echo "$global_number" ?>" readonly aria-describedby="basic-addon1">
+                                        </div>
+
+                                    </div>
+                                    <?php
+                                    $query312 = "SELECT * FROM `research3.2.1`";
+                                    $select312 = mysqli_query($conn, $query312);
+
+                                    if (mysqli_num_rows($select312) > 0) {
+                                        while ($row = mysqli_fetch_assoc($select312)) {
+                                            $name_health_institute = $row['name_health_institute'];
+                                            $categ = $row['categ'];
+                                            $no_year_collab = $row['no_year_collab'];
+                                            $title_project = $row['title_project'];
+                                            $cost = $row['cost'];
+                                            $fund = $row['fund'];
+                                    ?>
+                                            }
+                                            <div class="container d-grid mt-3">
+                                                <div class="border border-success border-3 p-3">
+                                                    <h3 class="ms-3">List of collaborations with health institutions</h3>
+
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Name of health
+                                                            institution</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$name_health_institute" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Categorized as local,
+                                                            national, global</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$categ" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Number of years in
+                                                            collaboration</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$no_year_collab" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Number of years in
+                                                            collaboration</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$title_project" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Fund source</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$cost" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Number of
+                                                            Citations</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$fund" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    <?php
+
+                                        }
+                                    }
+                                    ?>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
+                    <!--Research 3.2.2-->
                     <div class="d-inline-flex mt-3">
                         <div class="border border-dark w-100">
                             <div class=" d-inline-flex justify-content-start align-items-center">
@@ -157,18 +252,80 @@ include '../includes/db.php'; ?>
                                 </div>
                             </div>
                             <div class="dropdown">
-                                <button class="btn btn-light dropdown-toggle float-end w-100" type="button"
-                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-light dropdown-toggle float-end w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 </button>
                                 <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <h3 class="text-start ms-3">Score:</h3>
+                                    <?php
+                                    $program = "SELECT COUNT(*) AS noprog FROM `research3.2.2`";
+                                    $no_program = mysqli_query($conn, $program);
+                                    if (mysqli_num_rows($no_program) > 0) {
+                                        $row = $no_program->fetch_assoc();
+                                        $noprog = $row['noprog'];
+                                    }
+
+                                    ?>
+                                    <div class="container bg-success p-3">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">Total number of health
+                                                outreach programmes/activity</span>
+                                            <input type="text" class="form-control" value="<?php echo "$noprog" ?>" readonly aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <?php
+                                    $query322 = "SELECT * FROM `research3.2.2`";
+                                    $select322 = mysqli_query($conn, $query322);
+
+                                    if (mysqli_num_rows($select322) > 0) {
+                                        while ($row = mysqli_fetch_assoc($select322)) {
+                                            $title = $row['title'];
+                                            $description = $row['description'];
+                                            $total = $row['total'];
+                                            $fund = $row['fund'];
+                                    ?>
+                                            <div class="container d-grid mt-3">
+                                                <div class="border border-success border-3 p-3">
+
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Title of the PPA</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$title" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Short description of
+                                                            the PPA</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$description" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total Cost</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$total" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Fund Source</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$fund" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Fund source</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$cost" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Number of
+                                                            Citations</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$fund" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                    <?php
+                                        }
+                                    }
+
+                                    ?>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
+                    <!--Research 3.2.3-->
                     <div class="d-inline-flex mt-3">
                         <div class="border border-dark w-100">
                             <div class=" d-inline-flex justify-content-start align-items-center">
@@ -182,18 +339,79 @@ include '../includes/db.php'; ?>
                                 </div>
                             </div>
                             <div class="dropdown">
-                                <button class="btn btn-light dropdown-toggle float-end w-100" type="button"
-                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-light dropdown-toggle float-end w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 </button>
                                 <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <h3 class="text-start ms-3">Score:</h3>
+                                    <?php
+                                    $query323 = "SELECT * FROM `research3.2.3`";
+                                    $select323 = mysqli_query($conn, $query323);
+                                    if (mysqli_num_rows($select323) > 0) {
+                                        while ($row = mysqli_fetch_assoc($select323)) {
+                                            $respond = $row['respond'];
+                                            $no_approved = $row['no_approved'];
+                                            $facility = $row['facility'];
+                                            $lvlofCommunity = $row['lvlofCommunity'];
+                                            $titleEvent = $row['titleEvent'];
+                                            $noHours = $row['noHours'];
+                                            $noGuest = $row['noGuest'];
+                                            $amountFromPaid = $row['amountFromPaid'];
+                                    ?>
+                                            <div class="container d-grid mt-3">
+                                                <div class="border border-success border-3 p-3">
+
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Does your campus share
+                                                            sports facilities to the general public?</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$respond" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total number of
+                                                            approved requests from the community on the use of sport
+                                                            facilities</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$no_approved" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Facility type</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$facility" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Level of Community
+                                                            (Local, regional, national)</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$lvlofCommunity" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Title of Event/Type of
+                                                            Event</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$titleEvent" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">No. of hours</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$noHours" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total number of guests
+                                                            benefited from free access</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$noGuest" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total amount generated
+                                                            from paid access to sport facilities</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$amountFromPaid" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                    <?php
+                                        }
+                                    }
+                                    ?>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
+                    <!--Research 3.2.4-->
                     <div class="d-inline-flex mt-3">
                         <div class="border border-dark w-100">
                             <div class=" d-inline-flex justify-content-start align-items-center">
@@ -207,18 +425,135 @@ include '../includes/db.php'; ?>
                                 </div>
                             </div>
                             <div class="dropdown">
-                                <button class="btn btn-light dropdown-toggle float-end w-100" type="button"
-                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-light dropdown-toggle float-end w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 </button>
                                 <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <h3 class="text-start ms-3">Score:</h3>
+                                    <?php
+                                    $query322 = "SELECT * FROM `research3.2.4`";
+                                    $select322 = mysqli_query($conn, $query322);
+
+                                    if (mysqli_num_rows($select322) > 0) {
+                                        while ($row = mysqli_fetch_assoc($select322)) {
+                                            $sexActive = $row['sexActive'];
+                                            $pregnant = $row['pregnant'];
+                                            $haveBirth = $row['haveBirth'];
+                                            $pregnantLoss = $row['pregnantLoss'];
+                                            $impregnated = $row['impregnated'];
+                                            $testHIV = $row['testHIV'];
+                                            $percentSexActive = $row['percentSexActive'];
+                                            $percentfPregnant = $row['percentfPregnant'];
+                                            $percentfBirth = $row['percentfBirth'];
+                                            $percentfPregLoss = $row['percentfPregLoss'];
+                                            $percentmImpreg = $row['percentmImpreg'];
+                                            $percenttestHIV = $row['percenttestHIV'];
+                                            $nohealthcare = $row['nohealthcare'];
+                                            $title = $row['title'];
+                                            $description = $row['description'];
+                                            $total = $row['total'];
+                                            $fund = $row['fund'];
+
+                                    ?>
+                                            <div class="container d-grid mt-3">
+                                                <div class="border border-success border-3 p-3">
+
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total number of
+                                                            students that are sexually active</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$sexActive" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total number of
+                                                            pregnant students</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$pregnant" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total number of
+                                                            students have already given birth</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$haveBirth" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total number of
+                                                            students with pregnancy loss</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$pregnantLoss" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total number of
+                                                            students who have impregnated someone</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$impregnated" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total number of
+                                                            students that has been tested for HIV/AIDS</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$testHIV" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Percent of the
+                                                            student’s population is sexually active</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$percentSexActive" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Percent of the female
+                                                            student’s population is currently pregnant</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$percentfPregnant" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Percent of the female
+                                                            student’s population have already given birth</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$percentfBirth" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Percent of the female
+                                                            student’s population have experienced pregnancy loss</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$percentfPregLoss" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Percent of the male
+                                                            student’s population have impregnated someone</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$percentmImpreg" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Percent of the
+                                                            male/female student’s population have been tested for
+                                                            HIV/AIDS</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$percenttestHIV" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total number of sexual
+                                                            and reproductive health-care services for students</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$nohealthcare" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Title of the PPA</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$title" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Short description of
+                                                            the PPA</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$description" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total cost</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$total" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Fund source</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$fund" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                    <?php
+                                        }
+                                    }
+
+                                    ?>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
+                    <!--Research 3.2.5-->
                     <div class="d-inline-flex mt-3">
                         <div class="border border-dark w-100">
                             <div class=" d-inline-flex justify-content-start align-items-center">
@@ -233,18 +568,135 @@ include '../includes/db.php'; ?>
                                 </div>
                             </div>
                             <div class="dropdown">
-                                <button class="btn btn-light dropdown-toggle float-end w-100" type="button"
-                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-light dropdown-toggle float-end w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 </button>
                                 <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <h3 class="text-start ms-3">Score:</h3>
+                                    <?php
+                                    $query322 = "SELECT * FROM `research3.2.4`";
+                                    $select322 = mysqli_query($conn, $query322);
+
+                                    if (mysqli_num_rows($select322) > 0) {
+                                        while ($row = mysqli_fetch_assoc($select322)) {
+                                            $sexActive = $row['sexActive'];
+                                            $pregnant = $row['pregnant'];
+                                            $haveBirth = $row['haveBirth'];
+                                            $pregnantLoss = $row['pregnantLoss'];
+                                            $impregnated = $row['impregnated'];
+                                            $testHIV = $row['testHIV'];
+                                            $percentSexActive = $row['percentSexActive'];
+                                            $percentfPregnant = $row['percentfPregnant'];
+                                            $percentfBirth = $row['percentfBirth'];
+                                            $percentfPregLoss = $row['percentfPregLoss'];
+                                            $percentmImpreg = $row['percentmImpreg'];
+                                            $percenttestHIV = $row['percenttestHIV'];
+                                            $nohealthcare = $row['nohealthcare'];
+                                            $title = $row['title'];
+                                            $description = $row['description'];
+                                            $total = $row['total'];
+                                            $fund = $row['fund'];
+
+                                    ?>
+                                            <div class="container d-grid mt-3">
+                                                <div class="border border-success border-3 p-3">
+
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total number of
+                                                            employees that are sexually active</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$sexActive" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total number of
+                                                            pregnant employees</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$pregnant" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total number of
+                                                            employees have already given birth</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$haveBirth" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total number of
+                                                            employees with pregnancy loss</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$pregnantLoss" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total number of
+                                                            employees who have impregnated someone</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$impregnated" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total number of
+                                                            employees that has been tested for HIV/AIDS</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$testHIV" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Percent of the
+                                                            employee's population is sexually active</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$percentSexActive" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Percent of the female
+                                                            employee's population is currently pregnant</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$percentfPregnant" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Percent of the female
+                                                            employee's population have already given birth</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$percentfBirth" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Percent of the female
+                                                            employee's population have experienced pregnancy loss</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$percentfPregLoss" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Percent of the male
+                                                            employee's population have impregnated someone</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$percentmImpreg" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Percent of the
+                                                            male/female employee's population have been tested for
+                                                            HIV/AIDS</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$percenttestHIV" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total number of sexual
+                                                            and reproductive health-care services for employees</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$nohealthcare" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Title of the PPA</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$title" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Short description of
+                                                            the PPA</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$description" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Total cost</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$total" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Fund source</span>
+                                                        <input type="text" class="form-control" value="<?php echo "$fund" ?>" readonly aria-describedby="basic-addon1">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                    <?php
+                                        }
+                                    }
+
+                                    ?>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
+                    <!--Research 3.2.6-->
                     <div class="d-inline-flex mt-3">
                         <div class="border border-dark w-100">
                             <div class=" d-inline-flex justify-content-start align-items-center">
@@ -257,18 +709,70 @@ include '../includes/db.php'; ?>
                                 </div>
                             </div>
                             <div class="dropdown">
-                                <button class="btn btn-light dropdown-toggle float-end w-100" type="button"
-                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-light dropdown-toggle float-end w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 </button>
-                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <ul class="dropdown-menu w-100 bg-light" aria-labelledby="dropdownMenuButton1">
+
+                                    <h3 class="text-start ms-3">Score:</h3>
+                                    <?php
+                                    $query326 = "SELECT * FROM `research3.2.6`";
+                                    $select326 = mysqli_query($conn, $query326);
+
+                                    if (mysqli_num_rows($select326) > 0) {
+                                        while ($row = mysqli_fetch_assoc($select326)) {
+                                            $no_psydis = $row['no_psydis'];
+                                            $no_emp_psydis = $row['no_emp_psydis'];
+                                            $no_mentalh = $row['no_mentalh'];
+                                            $title = $row['title'];
+                                            $description = $row['description'];
+                                            $total = $row['total'];
+                                            $fund = $row['fund'];
+                                    ?>
+                                            <div class="container d-grid mt-3">
+                                                <div class="border border-success border-3 p-3">
+                                                    <p class="lead fw-bold">
+                                                        Statistics
+                                                    </p>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"><i class=""></i></span>
+                                                        <input type="text" class="form-control" placeholder="Total number of students with psychiatric disorder" readonly name="no_psydis" value="<?php echo "$no_psydis"; ?>">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"><i class=""></i></span>
+                                                        <input type="text" class="form-control" placeholder="Total number of employees with psychiatric disorder" readonly name="no_emp_psydis" value="<?php echo "$no_emp_psydis"; ?>">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"><i class=""></i></span>
+                                                        <input type="text" class="form-control" placeholder="Total number of mental health support for students and employees" readonly name="no_mentalh" value="<?php echo "$no_mentalh" ?>">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"><i class=""></i></span>
+                                                        <input type="text" class="form-control" placeholder="Title of the PPA" readonly name="title" value="<?php echo "$title" ?>">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                                        <input type="text" class="form-control" placeholder="Short description of the PPA" readonly name="description" value="<?php echo "$description" ?>">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"><i class=""></i></span>
+                                                        <input type="text" class="form-control" placeholder="Total cost" readonly name="total" value="<?php echo "$total" ?>">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"><i class=""></i></span>
+                                                        <input type="text" class="form-control" placeholder="Fund source " readonly name="fund" value="<?php echo "$fund" ?>">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    <?php
+                                        }
+                                    }
+                                    ?>
+
                                 </ul>
                             </div>
                         </div>
                     </div>
-
+                    <!--Research 3.2.7-->
                     <div class="d-inline-flex mt-3">
                         <div class="border border-dark w-100">
                             <div class=" d-inline-flex justify-content-start align-items-center">
@@ -281,13 +785,58 @@ include '../includes/db.php'; ?>
                                 </div>
                             </div>
                             <div class="dropdown">
-                                <button class="btn btn-light dropdown-toggle float-end w-100" type="button"
-                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-light dropdown-toggle float-end w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 </button>
-                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <ul class="dropdown-menu w-100 bg-light" aria-labelledby="dropdownMenuButton1">
+
+                                    <h3 class="text-start ms-3">Score:</h3>
+                                    <?php
+                                    $query326 = "SELECT * FROM `research3.2.7`";
+                                    $select326 = mysqli_query($conn, $query326);
+
+                                    if (mysqli_num_rows($select326) > 0) {
+                                        while ($row = mysqli_fetch_assoc($select326)) {
+                                            $no_policy = $row['no_policy'];
+                                            $no_PPAs = $row['no_PPAs'];
+                                            $title = $row['title'];
+                                            $description = $row['description'];
+                                            $total = $row['total'];
+                                            $fund = $row['fund'];
+                                    ?>
+                                            <div class="container d-grid mt-3">
+
+                                                <div class="border border-success border-3 p-3">
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"><i class=""></i></span>
+                                                        <input type="text" class="form-control" placeholder="Total number of students with psychiatric disorder" readonly name="no_policy" value="<?php echo "$no_policy"; ?>">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"><i class=""></i></span>
+                                                        <input type="text" class="form-control" placeholder="Total number of employees with psychiatric disorder" readonly name="no_PPAs" value="<?php echo "$no_PPAs"; ?>">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"><i class=""></i></span>
+                                                        <input type="text" class="form-control" placeholder="Title of the PPA" readonly name="title" value="<?php echo "$title" ?>">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                                        <input type="text" class="form-control" placeholder="Short description of the PPA" readonly name="description" value="<?php echo "$description" ?>">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"><i class=""></i></span>
+                                                        <input type="text" class="form-control" placeholder="Total cost" readonly name="total" value="<?php echo "$total" ?>">
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"><i class=""></i></span>
+                                                        <input type="text" class="form-control" placeholder="Fund source " readonly name="fund" value="<?php echo "$fund" ?>">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    <?php
+                                        }
+                                    }
+                                    ?>
+
                                 </ul>
                             </div>
                         </div>
