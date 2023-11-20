@@ -1,5 +1,5 @@
 <?php
-include '../../includes/db.php';
+include '../../../includes/db.php';
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $insert = mysqli_query($conn,$query);
 
         if($insert){
-            header("Location:../../admin/sdg3/formsdg3.php?message=Insert Successful");
+            header("Location:../../../admin/sdg3/formsdg3.php?message=Insert Successful");
         }elseif(!$insert){
             die("Query failed. " . mysqli_error($conn));
         }

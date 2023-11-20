@@ -1,4 +1,4 @@
-<?php include('../../includes/header.php');
+<?php include('../../includes/adminHead/header3.php');
 include '../../includes/db.php'; ?>
 
 
@@ -13,7 +13,7 @@ include '../../includes/db.php'; ?>
 <div class="container mt-5 mb-5">
     <div class="row-mt-5">
         <div class="dropdown">
-            <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-outline-dark dropdown-toggle fw-bold" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Pick a research
             </button>
             <ul class="dropdown-menu bg-white border-0 " aria-labelledby="dropdownMenuButton1">
@@ -48,7 +48,7 @@ include '../../includes/db.php'; ?>
                     <!--This div is for research 3.1.1-->
                     <div class="collapse w-100 h-auto" id="research311" style="display: block ;">
                         <h2 class="text-center pb-5">Research on health and wellbeing</h2>
-                        <form action="../../admin/sdg3/insert311.php" method="post" name="form1">
+                        <form action="../../admin/sdg3/insert/insert311.php" method="post" name="form1">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
                                 <input type="text" class="form-control" placeholder="Title of the Research" name="title">
@@ -79,7 +79,7 @@ include '../../includes/db.php'; ?>
                     <!--This div is for research 3.2.1-->
                     <div class=" w-100 h-auto" id="research321" style="display: none ;">
                         <h2 class="text-center pb-4">Current collaborations with health institutions</h2>
-                        <form action="../../admin/sdg3/insert321.php" method="post">
+                        <form action="../../admin/sdg3/insert/insert321.php" method="post">
 
                             <p class="text-center lead">List of collaborations with health institutions</p>
                             <div class="input-group mb-3">
@@ -118,7 +118,7 @@ include '../../includes/db.php'; ?>
                     <!--This div is for research 3.2.2-->
                     <div class=" w-100 h-auto" id="research322" style="display: none ;">
                         <h2 class="text-center pb-4">Health outreach programmes (extension project/activity)</h2>
-                        <form action="../../admin/sdg3/insert322.php" method="post">
+                        <form action="../../admin/sdg3/insert/insert322.php" method="post">
 
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
@@ -147,7 +147,7 @@ include '../../includes/db.php'; ?>
                     <!--This div is for research 3.2.3-->
                     <div class=" w-100 h-auto" id="research323" style="display: none ;">
                         <h2 class="text-center pb-4">Shared sport facilities</h2>
-                        <form action="../../admin/sdg3/insert323.php" method="post">
+                        <form action="../../admin/sdg3/insert/insert323.php" method="post">
 
                             <div class="border border-dark mb-3 p-2">
                                 <p class="text-start lead">Does your campus share sports facilities to the general
@@ -238,7 +238,7 @@ include '../../includes/db.php'; ?>
                     <div class=" w-100 h-auto" id="research324" style="display: none ;">
                         <h2 class="text-center pb-4">Sexual and reproductive health care services for students</h2>
 
-                        <form action="../../admin/sdg3/insert324.php" method="post">
+                        <form action="../../admin/sdg3/insert/insert324.php" method="post">
 
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
@@ -318,7 +318,7 @@ HIV/AIDS. " name="percenttestHIV">
 
                     <!--This div is for research 3.2.5-->
                     <div class=" w-100 h-auto" id="research325" style="display: none ;">
-                        <form action="../../admin/sdg3/insert325.php" method="post">
+                        <form action="../../admin/sdg3/insert/insert325.php" method="post">
 
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
@@ -397,7 +397,7 @@ HIV/AIDS. " name="percenttestHIV">
 
                     <!--This div is for research 3.2.6-->
                     <div class=" w-100 h-auto" id="research326" style="display: none ;">
-                        <form action="../../admin/sdg3/insert326.php" method="post">
+                        <form action="../../admin/sdg3/insert/insert326.php" method="post">
                             <p class="lead fw-bold">
                                 Statistics
                             </p>
@@ -438,7 +438,7 @@ HIV/AIDS. " name="percenttestHIV">
 
                     <!--This div is for research 3.2.7-->
                     <div class=" w-100 h-auto" id="research327" style="display: none ;">
-                        <form action="../../admin/sdg3/insert327.php" method="post">
+                        <form action="../../admin/sdg3/insert/insert327.php" method="post">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
                                 <input type="text" class="form-control" placeholder="Total Number of policy" name="no_policy">

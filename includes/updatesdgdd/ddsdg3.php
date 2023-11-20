@@ -1,6 +1,6 @@
 
 <div class="dropdown mt-4">
-            <button class="btn btn-outline-dark dropdown-toggle" type="a" id="dropdownMenua1"
+            <button class="btn btn-outline-dark dropdown-toggle fw-bold" type="a" id="dropdownMenua1"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Pick a research
             </button>
