@@ -17,7 +17,7 @@ include '../includes/db.php'; ?>
                 </div>
             </div>
         </div>
-        <div class="container-lg bg-secondary justify-content-center  fs-5 pt-2 pb-1">
+        <div class="container-lg bg-dark justify-content-center  fs-5 pt-2 pb-1">
             <ul class="nav nav-pills " id="pills-tab" role="tablist">
 
                 <li class="nav-item" role="presentation">
@@ -669,7 +669,6 @@ include '../includes/db.php'; ?>
                                 <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton1">
                                     <h3 class="text-start ms-3" id="score325">Score:</h3>
                                     <?php
-
                                     $count325 = "SELECT COUNT(*) AS ppas325 FROM `research3.2.5` WHERE title IS NOT NULL ";
                                     $count_325 = mysqli_query($conn, $count325);
 
@@ -678,7 +677,6 @@ include '../includes/db.php'; ?>
                                         $ppa325_number = $row['ppas325'];
                                     }
                                     $json_data_res325 = json_encode($ppa325_number);
-
 
                                     $query322 = "SELECT * FROM `research3.2.5`";
                                     $select322 = mysqli_query($conn, $query322);

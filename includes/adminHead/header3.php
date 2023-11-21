@@ -7,10 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Titillium+Web:wght@600;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Nunito:wght@700&family=Titillium+Web:wght@600;900&display=swap" rel="stylesheet">
     <style>
         *{
-            font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito', sans-serif;
+
         }
     </style>
 </head>
@@ -18,7 +20,7 @@
 <div class="bg-dark">
     <nav class="navbar navbar-expand-md navbar-light ">
             <a href="" class="navbar-brand">
-                <span class="fw-bold text-light ms-3" style="font-family: 'Montserrat', sans-serif;
+                <span class="fw-light text-light ms-3" style="font-family: 'Montserrat', sans-serif;
 font-family: 'Titillium Web', sans-serif;">The 17 Goals Admin</span>
             </a>
             <!-- Toggle button for mobile-->
