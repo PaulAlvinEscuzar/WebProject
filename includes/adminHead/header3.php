@@ -21,7 +21,7 @@ font-family: 'Nunito', sans-serif;
     <nav class="navbar navbar-expand-md navbar-light ">
             <a href="" class="navbar-brand">
                 <span class="fw-light text-light ms-3" style="font-family: 'Montserrat', sans-serif;
-font-family: 'Titillium Web', sans-serif;">The 17 Goals Admin</span>
+font-family: 'Titillium Web', sans-serif;">The 17 Goals Admin -- SDG-3</span>
             </a>
             <!-- Toggle button for mobile-->
             <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
@@ -47,6 +47,14 @@ font-family: 'Titillium Web', sans-serif;">The 17 Goals Admin</span>
                                 <li><a class="dropdown-item" href="">SDG 1</a></li>
                                 <li><a class="dropdown-item" href="#">SDG 2</a></li>
                                 <li><a class="dropdown-item" href="../../admin/sdg3/formsdg3.php">SDG 3</a></li>
+                                <li><a class="dropdown-item" href="../../admin/sdg4/formsdg4.php">SDG 4</a></li>
+                                <li><a class="dropdown-item" href="../../admin/sdg7/formsdg7.php">SDG 7</a></li>
+                                <li><a class="dropdown-item" href="../../admin/sdg8/formsdg8.php">SDG 8</a></li>
+                                <li><a class="dropdown-item" href="../../admin/sdg10/formsdg10.php">SDG 10</a></li>
+                                <li><a class="dropdown-item" href="../../admin/sdg11/formsdg11.php">SDG 11</a></li>
+                                <li><a class="dropdown-item" href="../../admin/sdg14/formsdg14.php">SDG 14</a></li>
+                                <li><a class="dropdown-item" href="../../admin/sdg15/formsdg15.php">SDG 15</a></li>
+                                <li><a class="dropdown-item" href="../../admin/sdg17/form/17.1.1.php">SDG 17</a></li>
                             </ul>
                         </div>
                     </li>

@@ -33,7 +33,7 @@ font-family: 'Titillium Web', sans-serif;">The 17 Goals</span>
             <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
                 <ul class="navbar-nav">
                     <li class="nav-link">
-                        <a href="" class="nav-link text-light">Home</a>
+                        <a href="../index.html" class="nav-link text-light">Home</a>
                     </li>
                     <li class="nav-link">
                         <div class="dropdown">
@@ -44,6 +44,14 @@ font-family: 'Titillium Web', sans-serif;">The 17 Goals</span>
                                 <li><a class="dropdown-item" href="">SDG 1</a></li>
                                 <li><a class="dropdown-item" href="#">SDG 2</a></li>
                                 <li><a class="dropdown-item" href="../sdgcontent/sdg3.php">SDG 3</a></li>
+                                <li><a class="dropdown-item" href="../sdgcontent/sdg4.php">SDG 4</a></li>
+                                <li><a class="dropdown-item" href="../sdgcontent/sdg4.php">SDG 5</a></li>
+                                <li><a class="dropdown-item" href="../sdgcontent/sdg7.php">SDG 7</a></li>
+                                <li><a class="dropdown-item" href="../sdgcontent/sdg8.php">SDG 8</a></li>
+                                <li><a class="dropdown-item" href="../sdgcontent/sdg11.php">SDG 11</a></li>
+                                <li><a class="dropdown-item" href="../sdgcontent/sdg14.php">SDG 14</a></li>
+                                <li><a class="dropdown-item" href="../sdgcontent/sdg15.php">SDG 15</a></li>
+                                <li><a class="dropdown-item" href="../sdgcontent/sdg17.php">SDG 17</a></li>
                             </ul>
                         </div>
                     </li>

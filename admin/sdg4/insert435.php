@@ -1,0 +1,29 @@
+<?php
+include '../../includes/db.php';
+
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+    $no_stud = $_POST['no_stud'];
+    $percofstudpop = $_POST['percofstudpop'];
+    $totnumlearnap = $_POST['totnumlearnap'];
+    $totnumofppaimap = $_POST['totnumofppaimap'];
+    $titleppa= $_POST['titleppa'];
+    $shortdesppa = $_POST['shortdesppa'];
+    $totalcost = $_POST['totalcost'];
+    $fundsource= $_POST['fundsource'];
+
+    // SQL query to insert data into the database
+    $sql = "INSERT INTO `research4.3.5` (no_stud, percofstudpop, totnumlearnap, totnumofppaimap, titleppa, shortdesppa, totalcost, fundsource)
+            VALUES ('$no_stud', '$percofstudpop', '$totnumlearnap',  '$totnumofppaimap', '$titleppa', ' $shortdesppa', '$totalcost', ' $fundsource')";
+    $result = mysqli_query($conn, $sql);
+
+        if($result){
+           header("Location:../../admin/sdg4/formsdg4.php?message=Added Successfuly");
+        }elseif(!$result){
+            die("Query failed. " . mysqli_error($conn));
+        }
+    }
+else {
+    echo "Invalid request method.";
+}
+?>

@@ -384,8 +384,18 @@ include '../includes/db.php'; ?>
                                     id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 </button>
                                 <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton1">
-                                    <h3 class="text-start ms-3">Score:</h3>
+                                    <h3 class="text-start ms-3" id="score323">Score:</h3>
                                     <?php
+                                    $say = "Free";
+                                    $queryfree = "SELECT COUNT(*) AS frees FROM `research3.2.3` WHERE noHours = '$say' ";
+                                    $free = mysqli_query($conn, $queryfree);
+                                    if (mysqli_num_rows($free) > 0) {
+                                        $row = $free->fetch_assoc();
+                                        $frees = $row['frees'];
+                                    }
+
+                                    $json_data_res323 = json_encode($frees);
+
                                     $query323 = "SELECT * FROM `research3.2.3`";
                                     $select323 = mysqli_query($conn, $query323);
                                     if (mysqli_num_rows($select323) > 0) {
@@ -849,8 +859,17 @@ include '../includes/db.php'; ?>
                                 </button>
                                 <ul class="dropdown-menu w-100 bg-light" aria-labelledby="dropdownMenuButton1">
 
-                                    <h3 class="text-start ms-3">Score:</h3>
+                                    <h3 class="text-start ms-3" id="score326">Score:</h3>
                                     <?php
+                                    $count326 = "SELECT COUNT(*) AS ppas326 FROM `research3.2.6` WHERE title IS NOT NULL ";
+                                    $count_326 = mysqli_query($conn, $count326);
+
+                                    if (mysqli_num_rows($count_326) > 0) {
+                                        $row = $count_326->fetch_assoc();
+                                        $ppa326_number = $row['ppas326'];
+                                    }
+                                    $json_data_res326 = json_encode($ppa326_number);
+
                                     $query326 = "SELECT * FROM `research3.2.6`";
                                     $select326 = mysqli_query($conn, $query326);
 
@@ -938,13 +957,22 @@ include '../includes/db.php'; ?>
                                 </button>
                                 <ul class="dropdown-menu w-100 bg-light" aria-labelledby="dropdownMenuButton1">
 
-                                    <h3 class="text-start ms-3">Score:</h3>
+                                    <h3 class="text-start ms-3" id="score327">Score:</h3>
                                     <?php
-                                    $query326 = "SELECT * FROM `research3.2.7`";
-                                    $select326 = mysqli_query($conn, $query326);
+                                    $count327 = "SELECT COUNT(*) AS ppas327 FROM `research3.2.7` WHERE title IS NOT NULL ";
+                                    $count_327 = mysqli_query($conn, $count327);
 
-                                    if (mysqli_num_rows($select326) > 0) {
-                                        while ($row = mysqli_fetch_assoc($select326)) {
+                                    if (mysqli_num_rows($count_327) > 0) {
+                                        $row = $count_327->fetch_assoc();
+                                        $ppa327_number = $row['ppas327'];
+                                    }
+                                    $json_data_res327 = json_encode($ppa327_number);
+
+                                    $query327 = "SELECT * FROM `research3.2.7`";
+                                    $select327 = mysqli_query($conn, $query327);
+
+                                    if (mysqli_num_rows($select327) > 0) {
+                                        while ($row = mysqli_fetch_assoc($select327)) {
                                             $no_policy = $row['no_policy'];
                                             $no_PPAs = $row['no_PPAs'];
                                             $title = $row['title'];
@@ -1010,10 +1038,24 @@ include '../includes/db.php'; ?>
 
 <script>
 //res311
-var scorebox311 = document.getElementById("");
-var x = <?php echo $json_data_res311 ?>;
-var y = 25;
+var numOfResearch = <?php echo $json_data_res311 ?>;
 
+const pointingWeights = {
+    SCOPUS: 25,
+    OtherPeerReviewed: 10
+};
+
+const points = numOfResearch * pointingWeights.SCOPUS * pointingWeights.OtherPeerReviewed;
+
+const score = Math.min(points, 25);
+
+// Additional scoring logic
+const scorebox311 = document.getElementById('score_311');
+if (score > 25) {
+    scorebox311.textContent = "Score: 25";
+} else {
+    scorebox311.textContent = "Score: " + score;
+}
 
 
 //res321
@@ -1049,8 +1091,24 @@ if (no_PPA_322 > 10) {
 } else {
     scorebox322.textContent = "Score: " + no_PPA_322 + " points";
 }
+if (no_PPA_322 === NULL) {
+    scorebox322.textContent = "Score: " + "0" + " points";
+}
 
 //res323
+
+var no_free_access = <?php echo $json_data_res323 ?>;
+var free = 0;
+
+for (var i = 0; i < no_free_access; i++) {
+    free += 3;
+}
+var scorebox323 = document.getElementById("score323");
+if (free >= 10) {
+    scorebox323.textContent = "Score: 10 points";
+} else {
+    scorebox323.textContent = "Score: " + free + " points";
+}
 
 //res324
 var scorebox324 = document.getElementById("score324");
@@ -1061,6 +1119,9 @@ if (no_PPA_324 > 10) {
 } else {
     scorebox324.textContent = "Score: " + no_PPA_324 + " points";
 }
+if (no_PPA_324 === NULL) {
+    scorebox324.textContent = "Score: " + "0" + " points";
+}
 
 //res325
 var scorebox325 = document.getElementById("score325");
@@ -1070,5 +1131,35 @@ if (no_PPA_325 > 10) {
     scorebox325.textContent = "Score: " + "10" + " points";
 } else {
     scorebox325.textContent = "Score: " + no_PPA_325 + " points";
+}
+if (no_PPA_325 === NULL) {
+    scorebox325.textContent = "Score: " + "0" + " points";
+}
+
+//res326
+var scorebox326 = document.getElementById("score326");
+var no_PPA_326 = <?php echo $json_data_res326 ?>;
+
+if (no_PPA_326 > 10) {
+    scorebox326.textContent = "Score: " + "10" + " points";
+} else {
+    scorebox326.textContent = "Score: " + no_PPA_326 + " points";
+}
+if (no_PPA_326 === NULL) {
+    scorebox326.textContent = "Score: " + "0" + " points";
+}
+
+//res327
+var scorebox327 = document.getElementById("score327");
+var no_PPA_327 = <?php echo $json_data_res327 ?>;
+
+if (no_PPA_327 > 10) {
+    scorebox327.textContent = "Score: " + "10" + " points";
+} else {
+    scorebox327.textContent = "Score: " + no_PPA_327 + " points";
+}
+
+if (no_PPA_327 === NULL) {
+    scorebox327.textContent = "Score: " + "0" + " points";
 }
 </script>

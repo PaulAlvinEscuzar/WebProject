@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+      svg {
+        font-family: "Russo One", sans-serif;
+        width: 100%;
+        height: 100%;
+      }
+      svg text {
+        animation: stroke 5s infinite alternate;
+        stroke-width: 2;
+        stroke: #365fa0;
+        font-size: 100px;
+      }
+      @keyframes stroke {
+        0% {
+          fill: rgba(72, 138, 204, 0);
+          stroke: rgba(54, 95, 160, 1);
+          stroke-dashoffset: 25%;
+          stroke-dasharray: 0 50%;
+          stroke-width: 2;
+        }
+        70% {
+          fill: rgba(72, 138, 204, 0);
+          stroke: rgba(54, 95, 160, 1);
+        }
+        80% {
+          fill: rgba(72, 138, 204, 0);
+          stroke: rgba(54, 95, 160, 1);
+          stroke-width: 3;
+        }
+        100% {
+          fill: rgba(72, 138, 204, 1);
+          stroke: rgba(54, 95, 160, 0);
+          stroke-dashoffset: -25%;
+          stroke-dasharray: 50% 0;
+          stroke-width: 0;
+        }
+      }
+
+      .wrapper {
+        background-color: #ffffff;
+      }
+
+      .top-image {
+        margin: auto;
+        position: relative;
+        width: 70%;
+        height: auto;
+        overflow: hidden;
+      }
+
+      .top-image img {
+        width: 100%;
+        height: 100%;
+      }
+      .navBar {
+        z-index: 1;
+        top: 10px;
+        position: sticky;
+        margin: auto;
+        margin-top: 30px;
+        border-radius: 40px;
+        background-color: rgb(35, 35, 35);
+        height: 100px;
+        width: 90%;
+        transition: height 0.6s ease-out, background-color 0.6s ease;
+      }
+
+      .navBar.sticky:hover {
+        height: 100px;
+      }
+      .navBar.sticky {
+        height: 30px;
+        background-color: #3e3e3e;
+      }
+
+      .mid {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        vertical-align: middle;
+        height: 1000px;
+
+        position: relative;
+      }
+      .overlay-bg {
+        top: 0px;
+        /* opacity: 0.7;
+        filter: blur(10px); */
+        background-image: url("img/bg2.jpg");
+        background-size: 100% 100%; 
+        background-repeat: no-repeat;
+        background-position: center;
+
+        height: 190vh;
+        width: 100%;
+      }
+      .left,
+      .right {
+        border-radius: 50px;
+        position: absolute;
+        height: 100px;
+        background-color: #13c4d17e;
+        width: 9%;
+      }
+
+      .left {
+        left: 20px;
+      }
+      .right {
+        right: 20px;
+      }
+
+      .button-container,
+      .info-container {
+        top: 200px;
+        width: 70%;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .button-container {
+        margin-right: 18px;
+        margin-top: 30px;
+      }
+
+      .info-container {
+        margin-right: -18px;
+        margin-top: 45px;
+      }
+
+      .button img {
+        width: 160px;
+        height: 150px;
+        align-items: middle;
+      }
+
+      .button,
+      .info {
+        border-radius: 10px;
+        align-items: center;
+        padding: 10px 10px;
+        margin: 15px;
+        background-color: #c9c9c9;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        min-width: 200px;
+        min-height: 190px;
+        position: relative;
+        transition: transform 0.5s ease, opacity 0.2s ease;
+        display: flex;
+        justify-content: center;
+      }
+
+      .info {
+        width: 190px;
+        white-space: normal;
+        text-overflow: clip;
+        padding: 20px;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+          0 15px 12px rgba(0, 0, 0, 0.22);
+        background-color: #b7b7b7;
+      }
+
+      .button:hover ~ .left {
+        transform: scale(2);
+      }
+
+      .button:hover {
+        opacity: 0;
+        transform: scale(1.05);
+        transition: transform 0.1s ease, opacity 0.5s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-image">
+      <img src="img/bg6.webp" alt="bg3" />
+    </div>
+
+    <hr style="height: 15px; width: 90%; background-color: #1c7eaf" />
+    <div class="wrapper" >
+      <svg>
+        <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+          The 17 Goals
+        </text>
+      </svg>
+    </div>
+
+    <hr style="height: 7px; width: 90%; background-color: #1c7eaf" />
+
+    <!-- <div class="navBar"></div> -->
+
+    <div class="mid">
+      <div class="overlay-bg"></div>
+      <!-- <div class="left"></div> -->
+      <div class="info-container">
+        <button class="info" style="background-color: #bf1d33">
+          <h4>End poverty in all its forms everywhere</h4>
+        </button>
+        <button class="info" style="background-color: #b7892f">
+          <h4>
+            End hunger, achieve food security and improved nutrition and promote
+            sustainable agricultures
+          </h4>
+        </button>
+        <button class="info" style="background-color: #3c8137">
+          <h4>
+            Ensure healthy lives and promote well-being for all at all ages
+          </h4>
+        </button>
+        <button class="info" style="background-color: #a51c27" >
+          <h4>
+            Ensure inclusive and equitable quality education and promote
+            lifelong learning opportunities for all
+          </h4>
+        </button>
+        <button class="info" style="background-color: #c93727">
+          <h4>Achieve gender equality and empower all women and girls</h4>
+        </button>
+        <button class="info" style="background-color: #249ebd">
+          <h4>
+            Ensure availability and sustainable management of water and
+            sanitation for all
+          </h4>
+        </button>
+        <button class="info" style="background-color: #dfaf13">
+          <h4>
+            Ensure access to affordable, reliable, sustainable and modern energy
+            for all
+          </h4>
+        </button>
+        <button class="info" style="background-color: #8d1a3c">
+          <h4>
+            Promote sustained, inclusive and sustainable economic growth, full
+            and productive employment and decent work for all
+          </h4>
+        </button>
+        <button class="info" style="background-color: #d65e2a">
+          <h4>
+            Build resilient infrastructure, promote inclusive and sustainable
+            industrialization and foster innovation
+          </h4>
+        </button>
+        <button class="info" style="background-color: #c01372">
+          <h4>Reduce inequality within and among countries</h4>
+        </button>
+        <button class="info" style="background-color: #d88827">
+          <h4>
+            Make cities and human settlements inclusive, safe, resilient and
+            sustainable
+          </h4>
+        </button>
+        <button class="info" style="background-color: #987124">
+          <h4>Ensure sustainable consumption and production patterns</h4>
+        </button>
+        <button class="info" style="background-color: #305e35">
+          <h4>Take urgent action to combat climate change and its impacts</h4>
+        </button>
+        <button class="info" style="background-color: #1c7eaf">
+          <h4>
+            Conserve and sustainably use the oceans, seas and marine resources
+            for sustainable development
+          </h4>
+        </button>
+        <button class="info" style="background-color: #438a37">
+          <h5>
+            Protect, restore and promote sustainable use of terrestrial
+            ecosystems, sustainably manage forests, combat desertification, and
+            halt and reverse land degradation and halt biodiversity loss
+          </h5>
+        </button>
+        <button class="info" style="background-color: #0d4160">
+          <h5>
+            Promote peaceful and inclusive societies for sustainable
+            development, provide access to justice for all and build effective,
+            accountable and inclusive institutions at all levels
+          </h5>
+        </button>
+        <button class="info" style="background-color: #0d3046">
+          <h4>
+            Strengthen the means of implementation and revitalize the Global
+            Partnership for Sustainable Development
+          </h4>
+        </button>
+      </div>
+
+      <div class="button-container">
+        <button class="button" style="background-color: #e5233d">
+          <a href="#"><img src="img/sdg1.jpg" alt="sdg1" /></a>
+        </button>
+        <button class="button" style="background-color: #dda73a">
+          <a href="#"><img src="img/sdg2.jpg" alt="sdg2" /></a>
+        </button>
+        <button class="button" style="background-color: #4ca146">
+          <a href="sdgcontent/sdg3.php"><img src="img/sdg3.jpg" alt="sdg3" /></a>
+        </button>
+        <button class="button" style="background-color: #c7212f">
+          <a href="sdgcontent/sdg4.php"><img src="img/sdg4.jpg" alt="sdg4" /></a>
+        </button>
+        <button class="button" style="background-color: #ef402d">
+          <a href="#"><img src="img/sdg5.jpg" alt="sdg5" /></a>
+        </button>
+        <button class="button" style="background-color: #27bfe6">
+          <a href="#"><img src="img/sdg6.jpg" alt="sdg6" /></a>
+        </button>
+        <button class="button" style="background-color: #fbc412">
+          <a href="sdgcontent/sdg7.php"><img src="img/sdg7.jpg" alt="sdg7" /></a>
+        </button>
+        <button class="button" style="background-color: #a31c44">
+          <a href="sdgcontent/sdg8.php"><img src="img/sdg8.jpg" alt="sdg8" /></a>
+        </button>
+        <button class="button" style="background-color: #f26a2e">
+          <a href="#"><img src="img/sdg9.jpg" alt="sdg9" /></a>
+        </button>
+        <button class="button" style="background-color: #e01483">
+          <a href="#"><img src="img/sdg10.jpg" alt="sdg10" /></a>
+        </button>
+        <button class="button" style="background-color: #f89d2a">
+          <a href="sdgcontent/sdg11.php"><img src="img/sdg11.jpg" alt="sdg11" /></a>
+        </button>
+        <button class="button" style="background-color: #bf8d2c">
+          <a href="#"><img src="img/sdg12.jpg" alt="sdg12" /></a>
+        </button>
+        <button class="button" style="background-color: #407f46">
+          <a href="#"><img src="img/sdg13.jpg" alt="sdg13" /></a>
+        </button>
+        <button class="button" style="background-color: #1f97d4">
+          <a href="sdgcontent/sdg14.php"><img src="img/sdg14.jpg" alt="sdg14" /></a>
+        </button>
+        <button class="button" style="background-color: #59ba47">
+          <a href="sdgcontent/sdg15.php"><img src="img/sdg15.jpg" alt="sdg15" /></a>
+        </button>
+        <button class="button" style="background-color: #136a9f">
+          <a href="#"><img src="img/sdg16.jpg" alt="sdg16" /></a>
+        </button>
+        <button class="button" style="background-color: #14496b">
+          <a href="sdgcontent/sdg17.php"><img src="img/sdg17.jpg" alt="sdg17" /></a>
+        </button>
+      </div>
+      <!-- <div class="right"></div> -->
+    </div>
+
+    <script>
+      const navBar = document.querySelector(".navBar");
+
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollTop >= 470) {
+          navBar.classList.add("sticky");
+        } else {
+          navBar.classList.remove("sticky");
+        }
+      });
+    </script>
+    <!--<script>
+
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+     background-image: url('img/bg2.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(90deg);
+
+const buttons = document.querySelectorAll('.button');
+
+buttons.forEach((button) => {
+  button.addEventListener('mouseover', () => {
+    // This function will be called when you hover over a button
+    buttons.forEach((btn) => {
+      if (btn !== button) {
+        btn.style.opacity = 0.3; // Make other buttons invisible
+      }
+    });
+  });
+
+  button.addEventListener('mouseout', () => {
+    // This function will be called when you move the mouse out of a button
+    buttons.forEach((btn) => {
+      btn.style.opacity = 5; // Make all buttons visible
+    });
+  });
+});
+</script>-->
+  </body>
+</html>
